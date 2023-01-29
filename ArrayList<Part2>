@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+
+namespace Chapter_4
+{
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            int n;
+            Console.Write("Enter n = ");
+            n = int.Parse(Console.ReadLine());
+
+            List<int> temp = new List<int>();
+            List<int> arr = new List<int>();
+            for(int i=1; i<=n; i++)
+            {
+                temp.Add(i);
+            }
+            Random rn = new Random();
+            for(int i=0; i<n; i++)
+            {
+                int index = rn.Next(temp.Count);
+                arr.Add(temp[index]);
+                temp.RemoveAt(index);
+                Console.WriteLine($"arr[{i}]={arr[i]}");
+
+            }
+            Console.ReadKey();
+
+        } 
+    }
+}
