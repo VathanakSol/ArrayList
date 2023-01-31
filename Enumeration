@@ -1,0 +1,24 @@
+namespace Chapter5
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnGet_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to continue","Confirm",MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                rYes.Checked = true;
+            }
+            else
+            {
+                rNo.Checked = true;
+            }
+
+        }
+    }
+}
